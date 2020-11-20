@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "name": "alterra",
+  "version": "1.0.0",
+  "main": "index.html",
+  "license": "MIT",
+  "scripts": {
+    "dev": "lite-server"
+  }
+}

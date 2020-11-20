@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Grandstander:wght@300&display=swap");
+/*variables*/
+/*mixins*/
+/*animations*/
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    right: 15px;
+  }
+  to {
+    opacity: 1;
+    right: 0px;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    bottom: 15px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+/*animation classes*/
+.fadeIn {
+  animation: 1s ease-in-out forwards fadeIn;
+}
+
+.fadeInRight {
+  animation: 1s ease-in-out forwards fadeInRight;
+}
+
+.fadeInBottom {
+  animation: 1s ease-in-out forwards fadeInBottom;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fredoka One", Verdana, sans-serif;
+  color: #E8E8E8;
+  font-weight: normal;
+  transition: background 500ms ease-in-out;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-family: "Fredoka One", Verdana, sans-serif;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-family: "Grandstander", cursive;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* sections widths */
+@media (min-width: 1023px) {
+  .container_900px {
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  .container_960px {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+/*tablet responsive */
+@media (min-width: 600px) and (max-width: 1023px) {
+  h1 {
+    font-size: 6vw;
+  }
+}
+/* phone responsive*/
+@media (max-width: 599px) {
+  h1 {
+    font-size: 8vw;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+}
+header {
+  height: 100px;
+  background-color: #2b4d36;
+}
+header #logo {
+  float: left;
+  margin: 15px 0 0 50px;
+}
+header #menu {
+  height: 100px;
+  float: right;
+  margin-right: 30px;
+  color: #E8E8E8;
+}
+header #menu #dark_switch {
+  cursor: pointer;
+}
+header #menu li {
+  display: inline;
+  list-style: none;
+}
+header #menu a {
+  text-decoration: none;
+  color: #E8E8E8;
+  font-family: "Fredoka One", Verdana, sans-serif;
+  display: inline-block;
+  padding: 40px 20px;
+  transition: background 150ms ease-in-out;
+}
+header #menu a:hover {
+  background: #5d7350;
+}
+
+/* phone responsive*/
+@media (max-width: 599px) {
+  header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+  }
+
+  #logo {
+    width: max-content;
+    float: none;
+    margin: 0;
+    padding: 15px 0;
+  }
+
+  #menu {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+/*end phone responsive*/
+#pie {
+  background: #2b4d36;
+  padding: 15px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#pie #botoneraRedes a {
+  padding: 0 3px;
+}
+
+/* phone responsive*/
+@media (max-width: 599px) {
+  #pie {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+    height: auto;
+  }
+
+  #datosContacto {
+    text-align: center;
+    height: auto;
+    width: 80%;
+    margin: 0;
+    padding: 0 0 15px 0;
+  }
+
+  #botoneraRedes {
+    float: right;
+    height: 40px;
+    width: 200px;
+    margin-right: 50px;
+    text-align: right;
+    padding-top: 10px;
+  }
+
+  #botoneraRedes a {
+    padding: 0 3px;
+  }
+}
+/*end phone responsive*/
+/* sections widths */
+#banner {
+  background: url("./media/banner_bkg2_comp.png") #e8e8e8 top no-repeat;
+}
+#banner #banner_box {
+  width: max-content;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#banner #banner_box #banner_img {
+  height: 250px;
+  position: relative;
+  margin-top: 75px;
+  padding-right: 20px;
+  opacity: 0;
+}
+#banner #banner_box #banner_txt {
+  width: 300px;
+  float: left;
+  position: relative;
+  margin-top: 75px;
+  padding: 50px 0 60px 20px;
+  color: #e8e8e8;
+  border-left: 2px #e8e8e8 solid;
+  opacity: 0;
+}
+#banner #banner_box #banner_txt #banner_txt h1 {
+  position: relative;
+}
+#banner .cta {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+#productos {
+  background-color: #2b4d36;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#productos #productos_tit {
+  width: 250px;
+  border-radius: 10px;
+  background-color: #5d7350;
+  font-family: "Fredoka One", Verdana, sans-serif;
+  color: #E8E8E8;
+  text-align: center;
+  margin: 0 auto 30px auto;
+  padding: 10px;
+  white-space: nowrap;
+}
+#productos #carrousel_box {
+  width: max-content;
+  text-align: center;
+  background-color: #5d7350;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+#productos #carrousel_box #productos_flecha_izq {
+  height: 50px;
+  width: 50px;
+  margin: 100px 20px 0 0;
+  float: left;
+  cursor: pointer;
+}
+#productos #carrousel_box #productos_flecha_der {
+  height: 50px;
+  width: 50px;
+  margin: 100px 0 0 20px;
+  float: left;
+  cursor: pointer;
+}
+#productos #carrousel_box .producto {
+  width: 250px;
+  height: 250px;
+  background-color: #E8E8E8;
+  float: left;
+  margin: 0 15px;
+  box-shadow: 1px 1px 3px black;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+#productos #carrousel_box .producto_img {
+  height: 100%;
+}
+#productos #carrousel_box .producto_txt {
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 5px;
+  position: absolute;
+  bottom: 0;
+}
+
+#sobreNosotros {
+  background-color: #E8E8E8;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#sobreNosotros #sobreNosotros_tit {
+  width: 275px;
+  border-radius: 10px;
+  background-color: #7c5170;
+  color: #E8E8E8;
+  text-align: center;
+  margin: 0 auto 30px auto;
+  padding: 10px;
+  white-space: nowrap;
+}
+#sobreNosotros #sobreNosotros_box {
+  width: 800px;
+  background: #313131;
+  margin: 0 auto;
+}
+#sobreNosotros #sobreNosotros_box #sobreNosotros_txt {
+  width: 500px;
+  background-color: #4f3048;
+  float: left;
+  padding: 25px;
+  box-sizing: border-box;
+}
+#sobreNosotros #sobreNosotros_box #sobreNosotros_txt p {
+  padding: 20px;
+  background: #7c5170;
+}
+#sobreNosotros #sobreNosotros_box #sobreNosotros_img {
+  width: 250px;
+  height: 250px;
+  margin: 25px;
+  float: right;
+  background: #7c5170;
+  overflow: hidden;
+}
+
+/*tablet responsive */
+@media (min-width: 600px) and (max-width: 1023px) {
+  #banner_box {
+    padding-bottom: 6vw;
+  }
+
+  #banner_img {
+    width: 25vw;
+    padding-left: 5vw;
+  }
+
+  #producto2 {
+    display: none;
+  }
+
+  #sobreNosotros_box {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+  }
+
+  #sobreNosotros_img {
+    order: -1;
+  }
+}
+@media (max-width: 599px) {
+  #banner_box {
+    width: min-content;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #banner_img {
+    width: 100%;
+    float: none;
+    margin: 0;
+    padding: 5% 0 1% 0;
+  }
+
+  #banner_txt {
+    height: auto;
+    width: 100%;
+    float: none;
+    margin: 0;
+    padding: 0;
+    border-left: none;
+    text-align: center;
+  }
+
+  #banner_btn {
+    display: none;
+  }
+
+  .producto {
+    width: 60vw;
+    height: 50vw;
+    float: none;
+  }
+
+  #producto2 {
+    display: none;
+  }
+
+  #carrousel_box {
+    width: 90%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }
+
+  #productos_flecha_izq {
+    height: 15vw;
+    width: 15vw;
+    margin: 0;
+    float: none;
+  }
+
+  #productos_flecha_der {
+    height: 15vw;
+    width: 15vw;
+    margin: 0;
+    float: none;
+  }
+
+  #sobreNosotros_box {
+    width: 100%;
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+  }
+
+  #sobreNosotros_txt {
+    width: 100%;
+    float: none;
+  }
+}
+/*end phone responsive*/
+
+/*# sourceMappingURL=style.css.map */

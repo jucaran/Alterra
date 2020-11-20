@@ -1,0 +1,66 @@
+header {
+  height: 100px;
+  background-color: $primary;
+
+  #logo {
+  float: left;
+  margin: 15px 0 0 50px;
+  }
+
+  #menu {
+    height: 100px;
+    float: right;
+    margin-right: 30px;
+    color: $light-gray;
+
+    #dark_switch {
+      cursor: pointer;
+    }
+
+    li {
+      display: inline;
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: $light-gray;
+      font-family: 'Fredoka One', Verdana, sans-serif;
+      display: inline-block;
+      padding: 40px 20px;
+      transition: background 150ms ease-in-out;
+    }
+
+    a:hover {
+      background: $primary-light;
+    }
+  }
+}
+
+/* phone responsive*/
+@media (max-width: 599px) {
+  header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+  }
+
+  #logo {
+    width: max-content;
+    float: none;
+    margin: 0;
+    padding: 15px 0;
+  }
+
+  #menu {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+} /*end phone responsive*/

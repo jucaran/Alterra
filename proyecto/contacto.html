@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto - Contacto</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--<link rel="stylesheet" href="contacto.css" />-->
+    <link rel="”icon”" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="media/favicon.png" />
+  </head>
+  <body>
+    <section class="container">
+      <header class="container_960px" id="header">
+        <div id="logo">
+          <a href="index.html">
+            <img src="media/logo_isotipo.svg" height="70px" alt="" />
+            <!-- <img width="150px" id="logo_texto" src="media/logo_texto.svg" alt=""> -->
+          </a>
+        </div>
+        <nav id="menu">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a id="dark_switch">Modo Oscuro</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="container_900px claro_container" id="contacto">
+        <h2 class="claro_texto">No dudes en dejarnos tu consulta!</h2>
+        <form method="POST" action="#">
+          <ul>
+            <li class="claro_texto">
+              Nombre:
+              <input class="form_input" type="text" name="nombre" required />
+            </li>
+            <li class="claro_texto">
+              Email:
+              <input class="form_input" type="email" name="email" required />
+            </li>
+            <li class="claro_texto">
+              Telefono: <input class="form_input" type="tel" name="telefono" />
+            </li>
+            <li class="claro_texto">
+              Consulta:
+              <textarea
+                name="consulta"
+                id=""
+                cols="30"
+                rows="10"
+                required
+              ></textarea>
+            </li>
+            <li>
+              <input
+                class="form_input"
+                id="enviar_btn"
+                value="Enviar"
+                type="submit"
+              />
+            </li>
+          </ul>
+        </form>
+      </section>
+
+      <footer class="container_960px" id="pie">
+        <div id="datosContacto">©Alterra 2020 - info@alterra.com.ar</div>
+        <div id="botoneraRedes">
+          <a href="http://instagram.com/tienda.alterra"
+            ><img src="media/instagram.png" width="35px" alt="Instagram"
+          /></a>
+          <a href="https://facebook.com/tienda.alterra" width="20px"
+            ><img src="media/facebook.png" width="35px" alt="Facebook"
+          /></a>
+          <a href="#" width="20px"
+            ><img src="media/whatsapp.png" width="35px" alt="Whatsapp"
+          /></a>
+        </div>
+      </footer>
+    </section>
+    <script src="main.js"></script> 
+  </body>
+</html>

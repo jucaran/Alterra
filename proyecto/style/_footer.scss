@@ -1,0 +1,16 @@
+#pie {
+  background: $primary;
+  padding: 15px 50px;
+  @include flex(row, space-between, center); 
+  flex-wrap: nowrap; 
+
+  #datosContacto {
+  }
+
+  #botoneraRedes {
+    @include flex(row, center, center);
+    a {
+      padding: 0 3px;
+    }
+  }
+}

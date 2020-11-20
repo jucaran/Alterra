@@ -1,0 +1,283 @@
+#banner {
+  background: url('./media/banner_bkg2_comp.png') #e8e8e8 top no-repeat;
+
+  #banner_box {
+    width: max-content;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    @include flex(row, center, center);
+
+    @media (min-width: 600px) and (max-width: 1023px) {
+      padding-bottom: 6vw;
+    }
+    @media screen and (max-width: 600px) {
+      width: min-content;
+      height: auto;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    #banner_img {
+      height: 250px;
+      position: relative;
+      margin-top: 75px;
+      padding-right: 20px;
+      opacity: 0;
+
+      @media (min-width: 600px) and (max-width: 1023px) {
+	width: 25vw;
+	padding-left:5vw;
+      }
+      @media screen and (max-width: 599px) {
+	width: 100%;
+	margin: 0; 
+	padding: 5% 0 1% 0; 
+      }
+    }
+
+    #banner_txt {
+      width: 300px;
+      float: left;
+      position: relative;
+      margin-top: 75px;
+      padding: 50px 0 60px 20px;
+      color: #e8e8e8;
+      border-left: 2px #e8e8e8 solid;
+      opacity: 0;
+
+      @media screen and (max-width: 599px) {
+	height: auto;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-left: 20px solid blue;
+	text-align: center;
+      }
+
+      #banner_txt h1 {
+	position: relative;
+      }
+    }
+  }
+  .cta {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    @include flex; 
+    padding-bottom: 15px;
+  }
+}
+
+#productos {
+  background-color: $primary;
+  padding: 30px 0;
+  @include flex(column); 
+
+  #productos_tit {
+    width: 250px;
+    border-radius: 10px;
+    background-color: $primary-light;
+    font-family: 'Fredoka One', Verdana, sans-serif;
+    color: $light-gray;
+    text-align: center;
+    margin: 0 auto 30px auto;
+    padding: 10px;
+    white-space: nowrap; 
+  }
+
+  #carrousel_box {
+    width: max-content;
+    text-align: center;
+    background-color: $primary-light;
+    margin: 0 auto;
+    padding: 20px 0;
+    @include flex(row, space-around);
+
+    #productos_flecha_izq {
+      height: 50px;
+      width: 50px;
+      //margin: 100px 20px 0 0;
+      //float: left;
+      cursor: pointer;
+      @media screen and (max-width: 599px) {
+	height: 15vw;
+	width: 15vw;
+	margin: 0;
+      }
+    }
+
+    #productos_flecha_der {
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      @media screen and (max-width: 599px) {
+	height: 15vw;
+	width: 15vw;
+	margin: 0;
+      }
+    }
+
+    @media screen and (max-width: 599px) {
+      #producto2 { display: none }
+    }
+  }
+}
+
+#sobreNosotros {
+  background-color: $light-gray;
+  padding: 50px 0;
+  @include flex(column);
+
+  #sobreNosotros_tit {
+    width: 275px;
+    border-radius: 10px;
+    background-color: $secondary-light;
+    color: $light-gray;
+    text-align: center;
+    margin: 0 auto 30px auto;
+    padding: 10px;
+    white-space: nowrap;
+  }
+
+  #sobreNosotros_box {
+    background: $dark-gray;
+    margin: 0 auto;
+
+    @media screen and (max-width: 599px) {
+      width: 100%;
+      display: flex;
+      flex-flow: column-reverse;
+      align-items: center;
+      padding-bottom: 35px;
+    }
+    @media screen and (min-width: 600px) and (max-width: 1023px) {
+      width: 100%;
+      @include flex(column, center, center);
+      padding-bottom: 35px;
+    }
+
+    #sobreNosotros_txt {
+      width: 500px;
+      background-color: $secondary;
+      float: left;
+      padding: 25px;
+      box-sizing: border-box;
+
+      p {
+	padding: 20px;
+	background: $secondary-light;
+      }
+      
+      @media screen and (max-width: 599px) {
+	width: 100%;
+      }
+    }
+
+    #sobreNosotros_img {
+      width: 250px;
+      height: 250px;
+      margin: 25px;
+      float: right;
+      background: $secondary-light;
+      overflow: hidden;
+
+      @media screen and (min-width: 600px) and (max-width:1023px) {
+	order: -1;
+      }
+    }
+  }
+}
+
+/*tablet responsive 
+@media (min-width: 600px) and (max-width: 1023px) {
+  #banner_box {
+    padding-bottom: 6vw;
+  }
+
+  #banner_img {
+    width: 25vw;
+    padding-left: 5vw;
+  }
+
+  #sobreNosotros_box {
+    //background: pink;
+    width: 100%;
+    @include flex(column, center, center);
+    padding-bottom: 35px;
+  }
+
+  #sobreNosotros_img {
+    order: -1;
+  }
+}
+
+/*phone responsive
+@media (max-width: 599px) {
+  #banner {
+    #banner_box {
+      width: min-content;
+      height: auto;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: space-around;
+
+      #banner_img {
+	width: 100%;
+	margin: 0;
+	padding: 5% 0 1% 0;
+      }
+
+      #banner_txt {
+	height: auto;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-left: 20px solid blue;
+	text-align: center;
+      }
+    }
+
+    #banner_btn {
+      display: none;
+    }
+  }
+
+  #producto2 {
+    display: none;
+  }
+
+  #carrousel_box {
+    width: 90%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }
+  #productos_flecha_izq {
+    height: 15vw;
+    width: 15vw;
+    margin: 0;
+    float: none;
+  }
+  #productos_flecha_der {
+    height: 15vw;
+    width: 15vw;
+    margin: 0;
+    float: none;
+  }
+
+  #sobreNosotros_box {
+    width: 100%;
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+    padding-bottom: 35px;
+  }
+
+  #sobreNosotros_txt {
+    width: 100%;
+    float: none;
+  }
+} /*end phone responsive*/

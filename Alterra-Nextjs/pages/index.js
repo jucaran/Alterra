@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 export default function Home() {
   return (
@@ -9,6 +10,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <Hero />
+
+      <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Grandstander:wght@300&display=swap');
+
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+          font-family: 'Fredoka One', Verdana, sans-serif;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        h1 {
+          font-size: 3.5rem;
+        }
+
+        p {
+          font-family: 'Grandstander', cursive;
+        }
+      `}</style>
     </div>
   );
 }

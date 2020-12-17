@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Products from './components/Products';
+import About from './components/About';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
@@ -11,6 +14,9 @@ export default function Home() {
       </Head>
       <Navbar />
       <Hero />
+      <Products />
+      <About />
+      <Footer />
 
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Grandstander:wght@300&display=swap');
@@ -24,6 +30,9 @@ export default function Home() {
 
         * {
           box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+          font-weight: normal;
         }
 
         h1 {

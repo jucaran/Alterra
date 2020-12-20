@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Products from './components/Products';
+import Products from './components/products';
 import About from './components/About';
 import Footer from './components/Footer';
 
@@ -20,6 +20,7 @@ export default function Home() {
 
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Grandstander:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
         html,
         body {
